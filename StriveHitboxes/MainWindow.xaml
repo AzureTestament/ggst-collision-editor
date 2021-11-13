@@ -1,0 +1,44 @@
+﻿<Window x:Class="StriveHitboxes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StriveHitboxes"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="Strive Hitbox Editor" Height="720" Width="1280" ResizeMode="NoResize">
+    <Grid>
+        <Menu Margin="0,0,0,10">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" IsCheckable="false" Click="OpenItem_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Open a file.</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem Header="_Save" IsCheckable="false" Click="SaveItem_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Save a file.</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem Header="_Close" IsCheckable="false" Click="CloseItem_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Close a file.</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+            </MenuItem>
+        </Menu>
+        <ListBox x:Name="spriteList" Margin="0,25,1042,286" SelectionChanged="spriteList_SelectionChanged"/>
+        <ListBox x:Name="boxList" Margin="0,423,1042,10" SelectionChanged="boxList_SelectionChanged"/>
+        <Image x:Name="spriteBox" HorizontalAlignment="Left" Height="659" Margin="243,25,0,0" VerticalAlignment="Top" Width="917"/>
+        <TextBox x:Name="xPos" HorizontalAlignment="Left" Margin="1172,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" TextChanged="xPos_TextChanged"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1172,37,0,0" TextWrapping="Wrap" Text="X Position" VerticalAlignment="Top" Height="17" Width="59"/>
+        <TextBox x:Name="yPos" HorizontalAlignment="Left" Margin="1172,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" TextChanged="yPos_TextChanged"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="1172,83,0,0" TextWrapping="Wrap" Text="Y Position" VerticalAlignment="Top" Height="17" Width="59"/>
+        <TextBox x:Name="xScl" HorizontalAlignment="Left" Margin="1172,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" TextChanged="xScl_TextChanged"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="1172,131,0,0" TextWrapping="Wrap" Text="X Scale" VerticalAlignment="Top" Height="17" Width="59"/>
+        <TextBox x:Name="yScl" HorizontalAlignment="Left" Margin="1172,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" TextChanged="yScl_TextChanged"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="1172,177,0,0" TextWrapping="Wrap" Text="Y Scale" VerticalAlignment="Top" Height="17" Width="59"/>
+    </Grid>
+</Window>
