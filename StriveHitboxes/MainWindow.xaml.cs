@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Data;
@@ -224,6 +224,7 @@ namespace StriveHitboxes
                         writeend += 4;
                     }
                 }
+                File.WriteAllBytes(saveFileDialog.FileName, oldpac);
             }
         }
 
